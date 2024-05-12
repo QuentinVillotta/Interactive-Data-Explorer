@@ -5,7 +5,7 @@ from pygwalker.api.streamlit import StreamlitRenderer
 from app_utils import data_loading as dl
 
 # Global Vars
-ALLOWED_FILE_FORMATS=["csv", "xlsx", "xls", "pq", "parquet", "pkl"]
+ALLOWED_FILE_FORMATS=["csv", "xlsx", "xls", "pq", "parquet"]
 
 def set_clicked():
     st.session_state.clicked = True
@@ -13,7 +13,7 @@ def set_clicked():
 @st.cache_resource
 def get_pyg_renderer(df) -> "StreamlitRenderer":
     # If you want to use feature of saving chart config, set `spec_io_mode="rw"`
-    return StreamlitRenderer(df, spec="./conf/gw_config.json",  spec_io_mode="rw")
+    return StreamlitRenderer(df, spec="./conf/gw_config.json",  spec_io_mode="r")
 
 # App config 
 # - Adjust the width of the Streamlit page
