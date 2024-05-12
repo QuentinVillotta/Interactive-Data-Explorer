@@ -14,6 +14,10 @@ To install them, run:
 pip install -r requirements.txt
 ```
 
+## Web version
+
+[Link](https://impact-initiatives-interactive-data-explorer-app.streamlit.app/) to the web app
+
 ## Run localy
 
 After installing the dependencies, to use the app locally, run:
