@@ -4,10 +4,10 @@ import streamlit as st
 
 def data_loader(uploaded_file):
     """
-    Load data from a CSV or Excel file.
+    Load data from a CSV, Excel, Parquet.
 
     Parameters:
-    file_path (str): Path to the file to be loaded.
+    uploaded_file (UploadedFile): Streamlit UploadedFile object.
 
     Returns:
     DataFrame or None: A pandas DataFrame containing the loaded data, or None if loading fails.
@@ -24,8 +24,12 @@ def data_loader(uploaded_file):
             # Load data from Excel
             data = pd.read_excel(uploaded_file)
             return data
+        elif file_extension.lower() in ['.pq', '.parquet']:
+            # Load data from Parquet
+            data = pd.read_parquet(uploaded_file)
+            return data
         else:
-            st.caption(":x: :red[Unsupported file type. Please provide a CSV or Excel file]")
+            st.caption(":x: :red[Unsupported file type. Please provide a CSV, Excel or Parquet file]")
             return None
 
     except Exception as e:

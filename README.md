@@ -2,7 +2,8 @@
 
 ## Overview
 
-Interactive Data Explorer app allows you to download tabular datasets (CSV, XLSX, etc.) and explore your data through an interactive interface for data visualization
+Interactive Data Explorer app allows you to download tabular datasets. and explore your data through an interactive interface for data visualization.
+Allowed file formats : CSV, XLSX, XLS, PARQUET 
 
 ## How to install dependencies
 
@@ -16,7 +17,7 @@ pip install -r requirements.txt
 
 ## Web version
 
-[Link](https://impact-initiatives-interactive-data-explorer-app.streamlit.app/) to the web app
+[Link](https://impact-initiatives-interactive-data-explorer-app.streamlit.app/) to access the web app
 
 ## Run localy
 
